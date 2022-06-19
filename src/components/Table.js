@@ -10,7 +10,7 @@ const IndeterminateCheckbox = forwardRef(({ indeterminate, ...rest }, ref) => {
   }, [resolvedRef, indeterminate]);
 
   return (
-    <div class="cb action">
+    <div className="cb action">
       <label>
         <input type="checkbox" ref={resolvedRef} {...rest} />
         <span>All</span>
@@ -42,7 +42,7 @@ const Table = ({ columns, data }) => {
         </div>
         {/* Loop through columns data to create checkbox */}
         {allColumns.map((column) => (
-          <div class="cb action" key={column.id}>
+          <div className="cb action" key={column.id}>
             <label>
               <input type="checkbox" {...column.getToggleHiddenProps()} />{" "}
               <span>{column.Header}</span>
